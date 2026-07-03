@@ -1,6 +1,10 @@
+@using Microsoft.AspNetCore.Http.Features
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IHtmlLocalizer<SharedResource> SharedLocalizer
 @model Product
 
-<h2>تعديل بيانات المنتج</h2>
+<h2>@SharedLocalizer["EditProduct"]</h2>
 
   <div class="container">
     <div class="row d-flex justify-content-center align-items-center">
@@ -10,11 +14,11 @@
                  <input type="hidden" asp-for="Id" />
       <div class="mb-4">
                     <label class="form-label fw-semibold">
-                        الفئة
+                        @SharedLocalizer["Categories"]
                     </label>
                     <select name="CategoryId" class="form-select">
 
-                        <option value="">اختر الفئة</option>
+                        <option value="">@SharedLocalizer["SelectCategories"]</option>
 
                         @foreach (var item in ViewBag.categories)
                         {
@@ -29,23 +33,23 @@
 
                 </div>
     <div class="form-group mb-3">
-        <label asp-for="Name">اسم المنتج</label>
+        <label asp-for="Name">@(SharedLocalizer["ProductName"])</label>
         <input asp-for="Name" class="form-control" />
     </div>
 
     <div class="form-group mb-3">
-        <label asp-for="Price">السعر</label>
+        <label asp-for="Price">@SharedLocalizer["Price"]</label>
         <input asp-for="Price" class="form-control" />
     </div>
     
      <div class="form-group mb-3">
-        <label asp-for="Images">الصورة</label>
+        <label asp-for="Images">@SharedLocalizer["Image"]</label>
         <input asp-for="Images" class="form-control" />
     </div>
 
 
-    <button type="submit" class="btn btn-primary">حفظ التعديلات</button>
-    <a asp-action="Index" class="btn btn-secondary">إلغاء</a>
+    <button type="submit" class="btn btn-primary">@SharedLocalizer["SaveChanges"]</button>
+    <a asp-action="Index" class="btn btn-secondary">@SharedLocalizer["Cancel"]</a>
 </form>
             </div>
         </div>

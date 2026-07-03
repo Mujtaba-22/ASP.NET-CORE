@@ -1,4 +1,7 @@
 @using Microsoft.AspNetCore.Http.Features
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IHtmlLocalizer<SharedResource> SharedLocalizer
 @{
 
 }
@@ -18,11 +21,11 @@
                      </small>
                      <hr>
                        <small class="text-text badge bg-danger">
-                        @ViewBag.Products.Price ريال
+                        @ViewBag.Products.Price @SharedLocalizer["Riyal"]
                      </small>
                      <hr>
-                         <a asp-action=""  class="btn btn-danger p-1">  اضف الى السلة</a>
-                         <a asp-action=""  class="btn btn-success p-1">   العودة الى التسوق    </a>
+                         <a asp-action=""  class="btn btn-danger p-1">@SharedLocalizer["AddToCart"]</a>
+                         <a asp-action=""  class="btn btn-success p-1">@SharedLocalizer["ReturnToShopping"]</a>
                 </div>
             </div>
         </div>

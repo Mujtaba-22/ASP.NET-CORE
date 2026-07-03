@@ -1,15 +1,18 @@
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IHtmlLocalizer<SharedResource> SharedLocalizer
 @{
 
 }
 
 <div class="container">
     <div class="text-center mb-5">
-         المنتجات المتوفرة  
+         @SharedLocalizer["AvailableProducts"]
     </div>
 
     @if(ViewBag.Filtered.Count==0)
     {
-        <h1>لا توجد منتجات لعرضها </h1>
+        <h1>@SharedLocalizer["NoProductsAvailable"]</h1>
     }
 
     else{
@@ -25,10 +28,10 @@
                             @item.Name
                         </div>
                         <h5 class="badge bg-danger text-white">
-                            @item.Price ريال
+                            @item.Price @SharedLocalizer["Riyal"]
                         </h5>
                         <div class="mb-4">
-                             <a asp-action="Details"  asp-route-name="@item.Name"  class="btn btn-success"> تفاصيل المنتج  </a>
+                             <a asp-action="Details"  asp-route-name="@item.Name"  class="btn btn-success"> @SharedLocalizer["ProductDetails"] </a>
                         </div>
 
                       </div>

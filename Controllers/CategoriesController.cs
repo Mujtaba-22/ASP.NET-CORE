@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using mini_store.Models;
 using mini_store.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace mini_store.Controllers
 {
@@ -12,7 +13,7 @@ namespace mini_store.Controllers
         {
             _context=cn;
         }
-
+        [Authorize]
         public IActionResult Index()
         {
 

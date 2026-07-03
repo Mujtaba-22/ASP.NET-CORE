@@ -8,4 +8,38 @@
 <data name="StoreSystem" xml:space="preserve"><value> نظام المتجر</value></data>
 <data name="Dashboard" xml:space="preserve"><value> لوحة التحكم</value></data>
 <data name="ReportUsers" xml:space="preserve"><value>  تقارير المستخدمين  </value></data>
+<data name="About" xml:space="preserve"><value>من نحن</value></data>
+<data name="Contact" xml:space="preserve"><value> اتصل بنا   </value></data>
+<data name="Guest" xml:space="preserve"><value>زائر</value></data>
+<data name="Store" xml:space="preserve"><value>متجر</value></data>
+<data name="SelectCategories" xml:space="preserve"><value>اختر الفئة</value></data>
+<data name="AddNewProducts" xml:space="preserve"><value>إضافة منتجات جديدة</value></data>
+<data name="ViewProducts" xml:space="preserve"><value>عرض المنتجات</value></data>
+<data name="Hello" xml:space="preserve"><value>مرحبا</value></data>
+<data name="Riyal" xml:space="preserve"><value>ريال</value></data>
+<data name="AvailableProducts" xml:space="preserve"><value>المنتجات المتوفرة</value></data>
+<data name="NoProductsAvailable" xml:space="preserve"><value>لا توجد منتجات لعرضها</value></data>
+<data name="ProductDetails" xml:space="preserve"><value>تفاصيل المنتج</value></data>
+<data name="AddToCart" xml:space="preserve"><value>أضف الى السلة</value></data>
+<data name="ReturnToShopping" xml:space="preserve"><value>العودة الى التسوق</value></data>
+<data name="EditProduct" xml:space="preserve"><value>تعديل بيانات المنتج</value></data>
+<data name="ProductName" xml:space="preserve"><value>اسم المنتج</value></data>
+<data name="Price" xml:space="preserve"><value>السعر</value></data>
+<data name="Image" xml:space="preserve"><value>الصورة</value></data>
+<data name="SaveChanges" xml:space="preserve"><value>حفظ التعديلات</value></data>
+<data name="Cancel" xml:space="preserve"><value>إلغاء</value></data>
+<data name="EnterProductName" xml:space="preserve"><value>أدخل اسم المنتج</value></data>
+<data name="EnterPrice" xml:space="preserve"><value>أدخل السعر</value></data>
+<data name="SearchProductName" xml:space="preserve"><value>ابحث باسم المنتج</value></data>
+<data name="Search" xml:space="preserve"><value>بحث</value></data>
+<data name="Category" xml:space="preserve"><value>الفئة</value></data>
+<data name="Actions" xml:space="preserve"><value>الإجراءات</value></data>
+<data name="NoProductsAvailable" xml:space="preserve"><value>لا توجد منتجات لعرضها</value></data>
+<data name="ConfirmDelete" xml:space="preserve"><value>هل أنت متأكد من حذف هذا المنتج؟</value></data>
+<data name="AddNewCategory" xml:space="preserve"><value>إضافة فئة جديدة</value></data>
+<data name="CategoryName" xml:space="preserve"><value>اسم الفئة</value></data>
+<data name="EnterCategoryName" xml:space="preserve"><value>أدخل اسم الفئة</value></data>
+<data name="Icon" xml:space="preserve"><value>الأيقونة</value></data>
+<data name="EnterIcon" xml:space="preserve"><value>أدخل كود الأيقونة</value></data>
+<data name="NoCategoriesAvailable" xml:space="preserve"><value>لا توجد فئات متاحة</value></data>
 </root>

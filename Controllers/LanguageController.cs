@@ -16,6 +16,6 @@ public class LanguageController : Controller
         );
 
         // 2. إعادة المستخدم إلى الصفحة التي طلب منها تغيير اللغة
-        return LocalRedirect(returnUrl);
+        return LocalRedirect(string.IsNullOrWhiteSpace(returnUrl) ? Url.Content("~/") : returnUrl);
     }
 }

@@ -1,4 +1,6 @@
-
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IHtmlLocalizer<SharedResource> SharedLocalizer
 @model List<Product>
 
 @{
@@ -10,7 +12,7 @@
     <div class="card">
         <div class="card-header">
             <h5>
-                <i class="bi bi-plus-circle-fill"></i> اضافة منتج جديد
+                <i class="bi bi-plus-circle-fill"></i>  @SharedLocalizer["AddNewProducts"]
             </h5>
         </div>
 
@@ -18,7 +20,7 @@
             <form asp-action="Create" method="post" enctype="multipart/form-data">
               @Html.AntiForgeryToken()
                 <div class="mb-3">
-                    <label class="form-label">اختر الفئة</label>
+                    <label class="form-label"> @SharedLocalizer["SelectCategories"]  </label>
                     <select class="form-select" name="CategoryId">
                       @foreach(var item in ViewBag.categories)
                       {
@@ -29,19 +31,19 @@
                     </select>
                 </div>
               <div class="mb-3">
-                <label class="form-label">اسم المنتج</label>
-                <input type="text" name="Name" placeholder="أدخل اسم المنتج" class="form-control"  />
+                <label class="form-label"> @SharedLocalizer["ProductName"]   </label>
+                <input type="text" name="Name" placeholder="@SharedLocalizer["EnterProductName"]" class="form-control"  />
                 <span asp-validation-for="@Model.First().Name" class="text-danger"></span>
               </div>
 
                <div class="mb-3">
-                <label class="form-label">سعر المنتج</label>
-                <input type="number" name="Price" step="0.01" value="0" placeholder="أدخل سعر المنتج" class="form-control"  />
+                <label class="form-label"> @SharedLocalizer["Price"] </label>
+                <input type="number" name="Price" step="0.01" value="0" placeholder="@SharedLocalizer["EnterPrice"]" class="form-control"  />
                 <span asp-validation-for="@Model.First().Price" class="text-danger"></span>
               </div>
 
               <div class="mb-4">
-                    <label class="form-label fw-semibold">صورة المنتج المرفوعة</label>
+                    <label class="form-label fw-semibold"> @SharedLocalizer["Image"] </label>
                     <input name="ImageFile" type="file" class="form-control" accept="image/*" />
                     @if (Model != null && Model.Any())
                     {   
@@ -52,8 +54,8 @@
 
               <div class="mb-3">
                
-               <button class="btn btn-success px-4 fw-bload">حفظ المنتج</button>
-               <a asp-action="Index" class="btn btn-light">إلغاء وعودة</a>
+               <button class="btn btn-success px-4 fw-bload">@SharedLocalizer["AddNewProducts"]</button>
+               <a asp-action="Index" class="btn btn-light">@SharedLocalizer["Cancel"]</a>
                 
               </div>
             </form>
@@ -68,14 +70,14 @@
           <div class="card mb-3 border-0 bg-light p-3 shadow-sm">
             <form method="get" asp-action="Index" class="row g-3 align-items-end">
                 <div class="col-md-9">
-                    <label class="form-label small fw-bold text-secondary">ابحث باسم المنتج</label>
-                    <input type="text" name="searchTerm" value="@ViewBag.CurrentSearch" placeholder="اكتب اسم المنتج الذي تريد البحث عنه..." class="form-control" />
+                    <label class="form-label small fw-bold text-secondary"> @SharedLocalizer["SearchProductName"] </label>
+                    <input type="text" name="searchTerm" value="@ViewBag.CurrentSearch" placeholder="@SharedLocalizer["EnterProductName"]" class="form-control" />
                 </div>
                 <div class="col-md-3 d-flex gap-2">
                     <button type="submit" class="btn btn-primary w-100 fw-bold">
-                        <i class="bi bi-search"></i> بحث
+                        <i class="bi bi-search"></i> @SharedLocalizer["Search"]
                     </button>
-                    <a asp-action="Index"  class="btn btn-secondary">إلغاء</a>
+                    <a asp-action="Index"  class="btn btn-secondary">@SharedLocalizer["Cancel"]</a>
                 </div>
             </form>
 </div>
@@ -83,11 +85,11 @@
              <thead>
                   <tr>
                     <td>#</td>
-                    <td>اسم المنتج</td>
-                    <td>سعر المنتج</td>
-                     <td>صورة المنتج</td>
-                    <td>الفئة</td>
-                    <td colspan="2">اجراء</td>
+                    <td>@SharedLocalizer["ProductName"]</td>
+                    <td>@SharedLocalizer["Price"]</td>
+                     <td>@SharedLocalizer["Image"]</td>
+                    <td>@SharedLocalizer["Category"]</td>
+                    <td colspan="2">@SharedLocalizer["Actions"]</td>
                   </tr>
              </thead>
 
@@ -95,7 +97,7 @@
               @if(Model==null )
               {
                 <tr>
-                    <td>لا توجد بيانات</td>
+                    <td>@SharedLocalizer["NoProductsAvailable"]</td>
                 </tr>
               }
 
@@ -111,7 +113,7 @@
                          </td>
                          <td class="ps-4 fw-bload text-secandory">@item.Categories.Name</td>
                         <td> <a asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square text-success"></i></a></td>
-                        <td> <a  asp-action="Delete"  asp-route-id="@item.Id" onclick="return confirm('هل انت متأكد من الحذف')"><i class="bi bi-trash3 text-danger"></i></a></td>
+                        <td> <a  asp-action="Delete"  asp-route-id="@item.Id" onclick="return confirm('@SharedLocalizer["ConfirmDelete"]')"><i class="bi bi-trash3 text-danger"></i></a></td>
                     </tr>
                 }
               }

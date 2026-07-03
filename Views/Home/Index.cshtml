@@ -1,10 +1,13 @@
-﻿@model List<Categories>
+﻿@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IHtmlLocalizer<SharedResource> SharedLocalizer
+@model List<Categories>
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = @SharedLocalizer["Store"];
 }
 
 <div class="container">
-    <h1 class="alert alert-info">الأقسام الرئيسية للمتجر </h1>
+    <h1 class="alert alert-info">     @SharedLocalizer["SelectCategories"]  </h1>
 
     <div class="row d-flex justify-content-center align-items-center">
         @foreach(var item in Model)
@@ -18,7 +21,7 @@
                     <h4 class="fw-bold mb-4">
                         @item.Name
                     </h4>
-                    <a asp-action="Products" asp-route-id=@item.Id class="btn btn-danger">عرض المنتجات</a>
+                    <a asp-action="Products" asp-route-id=@item.Id class="btn btn-danger">@SharedLocalizer["ViewProducts"]</a>
                 </div>
               </div>
             </dic>

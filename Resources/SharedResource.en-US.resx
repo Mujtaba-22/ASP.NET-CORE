@@ -8,5 +8,38 @@
 <data name="Dashboard" xml:space="preserve"><value>Dashboard</value></data>
 <data name="StoreSystem" xml:space="preserve"><value>Store System</value></data>
 <data name="ReportUsers" xml:space="preserve"><value>   Report Users    </value></data>
-
+<data name="About" xml:space="preserve"><value>About</value></data>
+<data name="Contact" xml:space="preserve"><value>Contact</value></data>
+<data name="Guest" xml:space="preserve"><value>Guest</value></data>
+<data name="Store" xml:space="preserve"><value>Store</value></data>
+<data name="SelectCategories" xml:space="preserve"><value>Select Categories</value></data>
+<data name="AddNewProducts" xml:space="preserve"><value>Add New Products</value></data>
+<data name="ViewProducts" xml:space="preserve"><value>View Products</value></data>
+<data name="Riyal" xml:space="preserve"><value>Riyal</value></data>
+<data name="Hello" xml:space="preserve"><value>Hello</value></data>
+<data name="AvailableProducts" xml:space="preserve"><value>Available Products</value></data>
+<data name="NoProductsAvailable" xml:space="preserve"><value>No Products Available</value></data>
+<data name="ProductDetails" xml:space="preserve"><value>Product Details</value></data>
+<data name="AddToCart" xml:space="preserve"><value>Add to Cart</value></data>
+<data name="ReturnToShopping" xml:space="preserve"><value>Return to Shopping</value></data>
+<data name="EditProduct" xml:space="preserve"><value>Edit Product</value></data>
+<data name="ProductName" xml:space="preserve"><value>Product Name</value></data>
+<data name="Price" xml:space="preserve"><value>Price</value></data>
+<data name="Image" xml:space="preserve"><value>Image</value></data>
+<data name="SaveChanges" xml:space="preserve"><value>Save Changes</value></data>
+<data name="Cancel" xml:space="preserve"><value>Cancel</value></data>
+<data name="EnterProductName" xml:space="preserve"><value>Enter Product Name</value></data>
+<data name="EnterPrice" xml:space="preserve"><value>Enter Price</value></data>
+<data name="SearchProductName" xml:space="preserve"><value>Search Product Name</value></data>
+<data name="Search" xml:space="preserve"><value>Search</value></data>
+<data name="Category" xml:space="preserve"><value>Category</value></data>
+<data name="Actions" xml:space="preserve"><value>Actions</value></data>
+<data name="NoProductsAvailable" xml:space="preserve"><value>No Products Available</value></data>
+<data name="ConfirmDelete" xml:space="preserve"><value>Are you sure you want to delete this product?</value></data>
+<data name="AddNewCategory" xml:space="preserve"><value>Add New Category</value></data>
+<data name="CategoryName" xml:space="preserve"><value>Category Name</value></data>
+<data name="EnterCategoryName" xml:space="preserve"><value>Enter Category Name</value></data>
+<data name="Icon" xml:space="preserve"><value>Icon</value></data>
+<data name="EnterIcon" xml:space="preserve"><value>Enter Icon Code</value></data>
+<data name="NoCategoriesAvailable" xml:space="preserve"><value>No Categories Available</value></data>
 </root>

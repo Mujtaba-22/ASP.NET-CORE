@@ -16,8 +16,8 @@
         .Select(c => new SelectListItem { Value = c.Name, Text = c.NativeName })
         .ToList();
         
-    // تحديد مسار الصفحة الحالية لإرجاع المستخدم إليها بعد تغيير اللغة
-    var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+    // تحديد عنوان الصفحة الحالية بالكامل لإرجاع المستخدم إليها بعد تغيير اللغة
+    var returnUrl = $"{Context.Request.PathBase}{Context.Request.Path}{Context.Request.QueryString}";
 }
 
 <div title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name">

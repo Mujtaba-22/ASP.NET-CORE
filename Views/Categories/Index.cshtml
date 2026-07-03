@@ -1,4 +1,7 @@
-
+@using Microsoft.AspNetCore.Http.Features
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IHtmlLocalizer<SharedResource> SharedLocalizer
 @model List<Categories>
 
 @{
@@ -12,7 +15,7 @@
     <div class="card">
         <div class="card-header">
             <h5>
-                <i class="bi bi-plus-circle-fill"></i> اضافة فئة جديدة 
+                <i class="bi bi-plus-circle-fill"></i> @SharedLocalizer["AddNewCategory"]
             </h5>
         </div>
 
@@ -21,21 +24,21 @@
               @Html.AntiForgeryToken()
 
               <div class="mb-3">
-                <label class="form-label">اسم الفئة</label>
-                <input type="text" name="Name" placeholder="أدخل اسم الفئة" class="form-control" />
+                <label class="form-label">@SharedLocalizer["CategoryName"]</label>
+                <input type="text" name="Name" placeholder="@SharedLocalizer["EnterCategoryName"]" class="form-control" />
               </div>
 
                <div class="mb-3">
-                <label class="form-label">الايقونة </label>
-                <input type="text" name="Icon" placeholder="أدخل كود الأيقونة" class="form-control" />
+                <label class="form-label">@SharedLocalizer["Icon"]</label>
+                <input type="text" name="Icon" placeholder="@SharedLocalizer["EnterIcon"]" class="form-control" />
               </div>
 
              
 
               <div class="mb-3">
                
-               <button class="btn btn-success px-4 fw-bload">حفظ الفئة</button>
-               <a asp-action="Index" class="btn btn-light">إلغاء وعودة</a>
+               <button class="btn btn-success px-4 fw-bload">@SharedLocalizer["AddNewCategory"]</button>
+               <a asp-action="Index" class="btn btn-light">@SharedLocalizer["Cancel"]</a>
                 
               </div>
             </form>
@@ -51,9 +54,9 @@
              <thead>
                   <tr>
                     <td>#</td>
-                    <td>اسم الفئة</td>
-                    <td>أيقونة الفئة </td>
-                    <td colspan="2">اجراء</td>
+                    <td>@SharedLocalizer["CategoryName"]</td>
+                    <td>@SharedLocalizer["Icon"]</td>
+                    <td colspan="2">@SharedLocalizer["Actions"]</td>
                   </tr>
              </thead>
 
@@ -61,7 +64,7 @@
               @if(Model==null )
               {
                 <tr>
-                    <td>لا توجد بيانات</td>
+                    <td>@SharedLocalizer["NoCategoriesAvailable"]</td>
                 </tr>
               }
 
