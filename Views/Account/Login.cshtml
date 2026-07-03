@@ -1,3 +1,7 @@
+@using Microsoft.AspNetCore.Http.Features
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IHtmlLocalizer<SharedResource> SharedLocalizer
 @model mini_store.ViewModels.LoginViewModel
 
 @{
@@ -8,7 +12,7 @@
     <div class="col-md-5">
         <div class="card shadow-sm">
             <div class="card-body p-4">
-                <h2 class="text-center mb-4">تسجيل الدخول</h2>
+                <h2 class="text-center mb-4">@SharedLocalizer["Login"]</h2>
                 
                 <form method="post" asp-action="Login">
                     <input type="hidden" asp-for="ReturnUrl" />
@@ -16,26 +20,26 @@
                     <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
                     <div class="mb-3">
-                        <label asp-for="Email" class="form-label">البريد الإلكتروني</label>
+                        <label asp-for="Email" class="form-label">@SharedLocalizer["Email"]</label>
                         <input asp-for="Email" class="form-control" placeholder="name@example.com" />
                         <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
 
                     <div class="mb-3">
-                        <label asp-for="Password" class="form-label">كلمة المرور</label>
+                        <label asp-for="Password" class="form-label">@SharedLocalizer["Password"]</label>
                         <input asp-for="Password" class="form-control" placeholder="********" />
                         <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
 
                     <div class="mb-3 form-check">
                         <input asp-for="RememberMe" class="form-check-input" />
-                        <label asp-for="RememberMe" class="form-check-label">تذكرني في المرة القادمة</label>
+                        <label asp-for="RememberMe" class="form-check-label">@SharedLocalizer["RememberMe"]</label>
                     </div>
 
-                    <button type="submit" class="btn btn-primary w-100">دخول</button>
+                    <button type="submit" class="btn btn-primary w-100">@SharedLocalizer["Login"]</button>
                 </form>
                 <div class="text-center mt-3">
-                 <p class="small mb-0">ليس لديك حساب؟ <a asp-action="Register">أنشئ حساباً جديداً من هنا</a></p>
+                 <p class="small mb-0">ليس لديك حساب؟ <a asp-action="Register">@SharedLocalizer["Register"]</a></p>
                 </div>
             </div>
         </div>

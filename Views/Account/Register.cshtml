@@ -1,4 +1,8 @@
+@using Microsoft.AspNetCore.Http.Features
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
 @model mini_store.ViewModels.RegisterViewModel
+@inject IHtmlLocalizer<SharedResource> SharedLocalizer
 
 <div class="container mt-5">
     <div class="row justify-content-center">
@@ -6,49 +10,49 @@
             <div class="card shadow border-0 rounded-3">
                 <div class="card-body p-4">
 
-                    <h3 class="text-center mb-4">إنشاء حساب جديد</h3>
+                    <h3 class="text-center mb-4">@SharedLocalizer["CreateAccount"]</h3>
 
                     <form asp-action="Register" method="post">
 
                         <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
                         <div class="mb-3">
-                            <label asp-for="FirstName" class="form-label"></label>
+                            <label asp-for="FirstName" class="form-label">@SharedLocalizer["FirstName"]</label>
                             <input asp-for="FirstName" class="form-control" />
                             <span asp-validation-for="FirstName" class="text-danger"></span>
                         </div>
 
                         <div class="mb-3">
-                            <label asp-for="LastName" class="form-label"></label>
+                            <label asp-for="LastName" class="form-label">@SharedLocalizer["LastName"]</label>
                             <input asp-for="LastName" class="form-control" />
                             <span asp-validation-for="LastName" class="text-danger"></span>
                         </div>
 
                         <div class="mb-3">
-                            <label asp-for="Email" class="form-label"></label>
+                            <label asp-for="Email" class="form-label">@SharedLocalizer["Email"]</label>
                             <input asp-for="Email" class="form-control" />
                             <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
 
                         <div class="mb-3">
-                            <label asp-for="Password" class="form-label"></label>
+                            <label asp-for="Password" class="form-label">@SharedLocalizer["Password"]</label>
                             <input asp-for="Password" type="password" class="form-control" />
                             <span asp-validation-for="Password" class="text-danger"></span>
                         </div>
 
                         <div class="mb-3">
-                            <label asp-for="ConfirmPaasword" class="form-label"></label>
+                            <label asp-for="ConfirmPaasword" class="form-label">@SharedLocalizer["ConfirmPassword"]</label>
                             <input asp-for="ConfirmPaasword" type="password" class="form-control" />
                             <span asp-validation-for="ConfirmPaasword" class="text-danger"></span>
                         </div>
 
                         <button type="submit" class="btn btn-success w-100">
-                            إنشاء الحساب
+                            @SharedLocalizer["CreateAccount"]
                         </button>
 
                         <div class="text-center mt-3">
-                            <span>لديك حساب بالفعل؟</span>
-                            <a asp-action="Login">تسجيل الدخول</a>
+                            <span>@SharedLocalizer["AlreadyHaveAccount"]</span>
+                            <a asp-action="Login">@SharedLocalizer["Login"]</a>
                         </div>
 
                     </form>

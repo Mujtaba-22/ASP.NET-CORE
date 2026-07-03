@@ -42,4 +42,15 @@
 <data name="Icon" xml:space="preserve"><value>الأيقونة</value></data>
 <data name="EnterIcon" xml:space="preserve"><value>أدخل كود الأيقونة</value></data>
 <data name="NoCategoriesAvailable" xml:space="preserve"><value>لا توجد فئات متاحة</value></data>
+<data name="Login" xml:space="preserve"><value>تسجيل الدخول</value></data>
+<data name="Password" xml:space="preserve"><value>كلمة المرور</value></data>
+<data name="RememberMe" xml:space="preserve"><value>تذكرني في المرة القادمة</value></data>
+<data name="Register" xml:space="preserve"><value>إنشاء حساب</value></data>
+<data name="CreateAccount" xml:space="preserve"><value>إنشاء حساب</value></data>
+<data name="FirstName" xml:space="preserve"><value>الاسم الأول</value></data>
+<data name="LastName" xml:space="preserve"><value>الاسم الأخير</value></data>
+<data name="Email" xml:space="preserve"><value>البريد الإلكتروني</value></data>
+<data name="ConfirmPassword" xml:space="preserve"><value>تأكيد كلمة المرور</value></data>
+<data name="AlreadyHaveAccount" xml:space="preserve"><value>لديك حساب بالفعل؟</value></data>
+
 </root>
